@@ -1,0 +1,11 @@
+#%Module######################################################################
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides kWIP 0.2.0"
+}
+
+module-whatis   "kWIP -- The k-mer Weighted inner product"
+
+set XE2PATH /g/data1/xe2/opt/apps/kwip
+
+prepend-path PATH             $XE2PATH/bin

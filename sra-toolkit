@@ -1,0 +1,14 @@
+#%Module######################################################################
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides NCBI's sra toolkit."
+}
+
+module-whatis   "sra-toolkit -- tools for extracting data from the SRA"
+
+set XE2PATH /g/data1/xe2/opt/apps/sra-toolkit
+
+prepend-path PATH             $XE2PATH/bin
+prepend-path MANPATH          $XE2PATH//share/man
+prepend-path PKG_CONFIG_PATH  $XE2PATH/lib/pkgconfig
+

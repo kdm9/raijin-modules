@@ -1,0 +1,14 @@
+#%Module######################################################################
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides sickle."
+}
+
+module-whatis   "sickle -- fast windowed quality trimmer"
+
+set XE2PATH /g/data1/xe2/opt/apps/sickle
+
+prepend-path PATH             $XE2PATH/bin
+prepend-path MANPATH          $XE2PATH//share/man
+prepend-path PKG_CONFIG_PATH  $XE2PATH/lib/pkgconfig
+
