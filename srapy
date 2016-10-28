@@ -9,3 +9,4 @@ module-whatis   "srapy -- pythonic SRA access"
 set XE2PATH /g/data1/xe2/opt/apps/srapy
 
 prepend-path PATH             $XE2PATH/installed-bin
+prepend-path LD_LIBRARY_PATH  /apps/python3/3.5.2/lib
