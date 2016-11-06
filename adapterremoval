@@ -9,6 +9,4 @@ module-whatis   "Adapter Removal -- Fast removal of adaptors"
 set XE2PATH /g/data1/xe2/opt/apps/adapterremoval
 
 prepend-path PATH             $XE2PATH/bin
-prepend-path MANPATH          $XE2PATH//share/man
-prepend-path PKG_CONFIG_PATH  $XE2PATH/lib/pkgconfig
-
+prepend-path MANPATH          $XE2PATH/share/man

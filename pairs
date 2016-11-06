@@ -1,12 +1,11 @@
 #%Module######################################################################
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides RAxML"
+        puts stderr "Vince Buffalo's pairs."
 }
 
-module-whatis   "raxml"
+module-whatis   "pairs -- Join/split paired end sequencing reads to interleaved files"
 
-set XE2PATH /g/data1/xe2/opt/apps/raxml/
+set XE2PATH /g/data1/xe2/opt/apps/pairs
 
 prepend-path PATH             $XE2PATH/bin
-prepend-path MANPATH          $XE2PATH/share/man

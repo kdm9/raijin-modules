@@ -1,12 +1,12 @@
 #%Module######################################################################
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides kWIP 0.2.0"
+        puts stderr "Provides BWA."
 }
 
-module-whatis   "kWIP -- The k-mer Weighted inner product"
+module-whatis   "bwa -- Short read aligner"
 
-set XE2PATH /g/data1/xe2/opt/apps/kwip
+set XE2PATH /g/data1/xe2/opt/apps/bwa
 
 prepend-path PATH             $XE2PATH/bin
 prepend-path MANPATH          $XE2PATH/share/man
