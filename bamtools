@@ -1,0 +1,15 @@
+#%Module######################################################################
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides bamtools"
+}
+
+module-whatis   "bamtools -- C++ HTS library"
+
+set XE2PATH /g/data1/xe2/opt/apps/bamtools
+
+prepend-path LD_RUN_PATH      $XE2PATH/lib
+prepend-path LD_LIBRARY_PATH  $XE2PATH/lib
+prepend-path LIBRARY_PATH     $XE2PATH/lib
+prepend-path CPATH            $XE2PATH/include
+prepend-path PKG_CONFIG_PATH  $XE2PATH/lib/pkgconfig
