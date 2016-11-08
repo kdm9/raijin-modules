@@ -1,17 +1,15 @@
 #%Module######################################################################
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides the zstd compression program."
+        puts stderr "Provides the Succinct Data Structure Library"
 }
 
-module-whatis   "Zstandard -- very fast compression"
+module-whatis   "sdsl-lite -- Succinct Data Structure Library 2"
 
-set XE2PATH /g/data1/xe2/opt/apps/zstd
+set XE2PATH /g/data1/xe2/opt/apps/sdsl
 
 prepend-path LD_RUN_PATH      $XE2PATH/lib
 prepend-path LD_LIBRARY_PATH  $XE2PATH/lib
 prepend-path LIBRARY_PATH     $XE2PATH/lib
-prepend-path PATH             $XE2PATH/bin
 prepend-path CPATH            $XE2PATH/include
-prepend-path MANPATH          $XE2PATH/share/man
 prepend-path PKG_CONFIG_PATH  $XE2PATH/lib/pkgconfig
