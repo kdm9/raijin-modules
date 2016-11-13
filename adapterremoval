@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides Adapter Removal."
@@ -6,7 +8,10 @@ proc ModulesHelp { } {
 
 module-whatis   "Adapter Removal -- Fast removal of adaptors"
 
-set XE2PATH /g/data1/xe2/opt/apps/adapterremoval
+set PREFIX /g/data1/xe2/opt/apps/adapterremoval
 
-prepend-path PATH             $XE2PATH/bin
-prepend-path MANPATH          $XE2PATH/share/man
+soft-prereq zlib/1.2.8
+soft-prereq bzip2/1.0.6
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man

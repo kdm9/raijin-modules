@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides khmer 2.0"
@@ -6,7 +8,8 @@ proc ModulesHelp { } {
 
 module-whatis   "khmer -- Probablistic k-mer counting and more"
 
-set XE2PATH /g/data1/xe2/opt/apps/khmer
+set PREFIX /g/data1/xe2/opt/apps/khmer
 
-prepend-path PATH             $XE2PATH/installed-bin
-prepend-path LD_LIBRARY_PATH  /apps/python3/3.5.2/lib
+soft-prereq python3/3.5.2
+
+prepend-path PATH             $PREFIX/installed-bin

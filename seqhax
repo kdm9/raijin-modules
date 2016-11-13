@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides seqhax"
@@ -6,8 +8,8 @@ proc ModulesHelp { } {
 
 module-whatis   "seqhax -- Misc sequence manipulations"
 
-module load zlib/1.2.8
+soft-prereq zlib/1.2.8
 
-set XE2PATH /g/data1/xe2/opt/apps/seqhax
+set PREFIX /g/data1/xe2/opt/apps/seqhax
 
-prepend-path PATH             $XE2PATH/bin
+prepend-path PATH             $PREFIX/bin

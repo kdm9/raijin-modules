@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides sickle."
@@ -6,8 +8,10 @@ proc ModulesHelp { } {
 
 module-whatis   "sickle -- fast windowed quality trimmer"
 
-set XE2PATH /g/data1/xe2/opt/apps/sickle
+set PREFIX /g/data1/xe2/opt/apps/sickle
 
-prepend-path PATH             $XE2PATH/bin
-prepend-path MANPATH          $XE2PATH/share/man
+soft-prereq zlib/1.2.8
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man
 

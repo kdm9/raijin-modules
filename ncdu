@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides netcurses Disk Usage."
@@ -6,7 +8,7 @@ proc ModulesHelp { } {
 
 module-whatis   "ncdu -- Graphical description of disk usage"
 
-set XE2PATH /g/data1/xe2/opt/apps/ncdu
+set PREFIX /g/data1/xe2/opt/apps/ncdu
 
-prepend-path PATH             $XE2PATH/bin
-prepend-path MANPATH          $XE2PATH/share/man
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man

@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides the Succinct Data Structure Library"
@@ -6,10 +8,12 @@ proc ModulesHelp { } {
 
 module-whatis   "sdsl-lite -- Succinct Data Structure Library 2"
 
-set XE2PATH /g/data1/xe2/opt/apps/sdsl
+set PREFIX /g/data1/xe2/opt/apps/sdsl
 
-prepend-path LD_RUN_PATH      $XE2PATH/lib
-prepend-path LD_LIBRARY_PATH  $XE2PATH/lib
-prepend-path LIBRARY_PATH     $XE2PATH/lib
-prepend-path CPATH            $XE2PATH/include
-prepend-path PKG_CONFIG_PATH  $XE2PATH/lib/pkgconfig
+prepend-path LD_RUN_PATH        $PREFIX/lib
+prepend-path LD_LIBRARY_PATH    $PREFIX/lib
+prepend-path LIBRARY_PATH       $PREFIX/lib
+prepend-path CPATH              $PREFIX/include
+prepend-path C_INCLUDE_PATH     $PREFIX/include
+prepend-path CPLUS_INCLUDE_PATH $PREFIX/include
+prepend-path PKG_CONFIG_PATH    $PREFIX/lib/pkgconfig

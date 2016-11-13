@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides kWIP 0.2.0"
@@ -6,7 +8,9 @@ proc ModulesHelp { } {
 
 module-whatis   "kWIP -- The k-mer Weighted inner product"
 
-set XE2PATH /g/data1/xe2/opt/apps/kwip
+set PREFIX /g/data1/xe2/opt/apps/kwip
 
-prepend-path PATH             $XE2PATH/bin
-prepend-path MANPATH          $XE2PATH/share/man
+soft-prereq zlib/1.2.8
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man

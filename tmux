@@ -1,4 +1,6 @@
 #%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
 proc ModulesHelp { } {
         global version
         puts stderr "Provides the zstd compression program."
@@ -6,9 +8,8 @@ proc ModulesHelp { } {
 
 module-whatis   "Zstandard -- very fast compression"
 
-set XE2PATH /g/data1/xe2/opt/apps/tmux
-setenv ZSTD_ROOT $XE2PATH
+set PREFIX /g/data1/xe2/opt/apps/tmux
 
-prepend-path PATH             $XE2PATH/bin
-prepend-path LD_LIBRARY_PATH  $XE2PATH/lib
-prepend-path MANPATH          $XE2PATH/share/man
+prepend-path PATH             $PREFIX/bin
+prepend-path LD_LIBRARY_PATH  $PREFIX/lib
+prepend-path MANPATH          $PREFIX/share/man
