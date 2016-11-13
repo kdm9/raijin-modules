@@ -12,7 +12,7 @@ module-whatis   "SeqAn -- C++ sequence analysis library (header only)"
 set PREFIX /g/data1/xe2/opt/apps/seqan
 
 soft-prereq zlib/1.2.8
-soft-prereq bzip/1.0.6
+soft-prereq bzip2/1.0.6
 
 prepend-path CPATH              $PREFIX/include
 prepend-path C_INCLUDE_PATH     $PREFIX/include

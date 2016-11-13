@@ -1,0 +1,15 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides snakemake"
+}
+
+module-whatis   "snakemake -- Snakemake"
+
+set PREFIX /g/data1/xe2/opt/apps/snakemake
+
+soft-prereq python3/3.5.2
+
+prepend-path PATH             $PREFIX/installed-bin
