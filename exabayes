@@ -1,0 +1,14 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides Exabayes"
+}
+
+module-whatis   "exabayes"
+
+set PREFIX /g/data1/xe2/opt/apps/exabayes/
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man

@@ -1,0 +1,16 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides netcurses Disk Usage."
+}
+
+module-whatis   "ncdu -- Graphical description of disk usage"
+
+set PREFIX /g/data1/xe2/opt/apps/mitobim
+
+soft-prereq mira
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man

@@ -1,0 +1,23 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides jellyfish"
+}
+
+module-whatis   "jellyfish 2.x -- Kmer counting library and commands"
+
+set PREFIX /g/data1/xe2/opt/apps/jellyfish/2
+
+soft-prereq zlib/1.2.8
+
+prepend-path LD_RUN_PATH        $PREFIX/lib
+prepend-path LD_LIBRARY_PATH    $PREFIX/lib
+prepend-path LIBRARY_PATH       $PREFIX/lib
+prepend-path CPATH              $PREFIX/include/jellyfish-2.2.6
+prepend-path C_INCLUDE_PATH     $PREFIX/include/jellyfish-2.2.6
+prepend-path CPLUS_INCLUDE_PATH $PREFIX/include/jellyfish-2.2.6
+prepend-path PKG_CONFIG_PATH    $PREFIX/lib/pkgconfig
+prepend-path PATH               $PREFIX/bin
+prepend-path MANPATH            $PREFIX/share/man
