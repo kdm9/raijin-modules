@@ -1,3 +1,0 @@
-#%Module######################################################################
-source /opt/Modules/extensions/extensions.tcl
-docommon
