@@ -1,0 +1,19 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides quip"
+}
+
+module-whatis   "quip -- Fastq compressor (NOT kwip, kevin's tool)"
+
+soft-prereq zlib/1.2.8
+soft-prereq bzip2/1.0.6
+
+set PREFIX /g/data1/xe2/opt/apps/quip-compressor/
+
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man
+
