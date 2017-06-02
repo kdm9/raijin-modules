@@ -3,13 +3,11 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides angsd."
+        puts stderr "Provides plink 1.9 ."
 }
 
-module-whatis   "ANGSD"
+module-whatis   "plink"
 
-set PREFIX /g/data1/xe2/opt/apps/angsd/
-
-soft-prereq zlib/1.2.8
+set PREFIX /g/data1/xe2/opt/apps/plink19/
 
 prepend-path PATH             $PREFIX/bin

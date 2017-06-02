@@ -3,13 +3,11 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides angsd."
+        puts stderr "Provides yaha"
 }
 
-module-whatis   "ANGSD"
+module-whatis   "yaha split read aligner"
 
-set PREFIX /g/data1/xe2/opt/apps/angsd/
-
-soft-prereq zlib/1.2.8
+set PREFIX /g/data1/xe2/opt/apps/yaha/
 
 prepend-path PATH             $PREFIX/bin

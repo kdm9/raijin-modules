@@ -3,13 +3,12 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides angsd."
+        puts stderr "Provides freebayes"
 }
 
-module-whatis   "ANGSD"
+module-whatis   "freebayes"
 
-set PREFIX /g/data1/xe2/opt/apps/angsd/
+soft-prereq parallel
 
-soft-prereq zlib/1.2.8
-
+set PREFIX /g/data1/xe2/opt/apps/freebayes
 prepend-path PATH             $PREFIX/bin

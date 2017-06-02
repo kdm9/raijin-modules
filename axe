@@ -3,13 +3,14 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides angsd."
+        puts stderr "Provides axe."
 }
 
-module-whatis   "ANGSD"
+module-whatis   "Axe"
 
-set PREFIX /g/data1/xe2/opt/apps/angsd/
+set PREFIX /g/data1/xe2/opt/apps/axe
 
 soft-prereq zlib/1.2.8
 
 prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man
