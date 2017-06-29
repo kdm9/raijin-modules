@@ -1,0 +1,18 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides pigz"
+}
+
+module-whatis   "pigz -- paralllel gzip"
+
+soft-prereq zlib/1.2.8
+
+set PREFIX /g/data1/xe2/opt/apps/pigz/
+
+
+prepend-path PATH             $PREFIX/bin
+prepend-path MANPATH          $PREFIX/share/man
+
