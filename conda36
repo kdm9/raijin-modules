@@ -3,14 +3,14 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides axe."
+        puts stderr "Provides python 3.6 and conda"
 }
 
-module-whatis   "Axe"
+module-whatis   "conda -- a python3.6 distribution"
 
-set PREFIX /g/data1/xe2/opt/apps/axe
-
-soft-prereq zlib/1.2.8
+set PREFIX /g/data/xe2/opt/conda
 
 prepend-path PATH             $PREFIX/bin
 prepend-path MANPATH          $PREFIX/share/man
+puts stdout "source /g/data/xe2/opt/conda/etc/profile.d/conda.sh;"
+

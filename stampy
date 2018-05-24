@@ -1,0 +1,15 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides stampy"
+}
+
+module-whatis   "stampy"
+
+set PREFIX /g/data1/xe2/opt/apps/stampy-1.0.32/
+
+soft-prereq python/2.7.11
+
+prepend-path PATH             $PREFIX/

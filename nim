@@ -3,12 +3,11 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides git."
+        puts stderr "Provides Nim compiler"
 }
 
-module-whatis   "git and git-lfs"
+module-whatis   "nim lang compiler"
 
-set PREFIX /g/data1/xe2/opt/apps/git/
+set PREFIX /g/data1/xe2/opt/apps/nim
 
 prepend-path PATH             $PREFIX/bin
-prepend-path MANPATH          $PREFIX/share/man

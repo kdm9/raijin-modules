@@ -3,12 +3,11 @@ source /opt/Modules/extensions/extensions.tcl
 
 proc ModulesHelp { } {
         global version
-        puts stderr "Provides BWA."
+        puts stderr "Provides mosdepth"
 }
 
-module-whatis   "bwa -- Short read aligner"
+module-whatis   "mosdepth"
+soft-prereq htslib/1.4
 
-set PREFIX /g/data1/xe2/opt/apps/bwa
-
+set PREFIX /g/data1/xe2/opt/apps/mosdepth
 prepend-path PATH             $PREFIX/bin
-prepend-path MANPATH          $PREFIX/share/man

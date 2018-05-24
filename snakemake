@@ -10,7 +10,7 @@ module-whatis   "snakemake -- Snakemake"
 
 set PREFIX /g/data1/xe2/opt/apps/snakemake
 
-soft-prereq python3/3.5.2
-soft-prereq R/3.3.0
+soft-prereq python3/3.6.2
+soft-prereq R/3.4.3
 
 prepend-path PATH             $PREFIX/installed-bin

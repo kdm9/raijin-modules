@@ -1,0 +1,20 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides GHC + cabal for haskell"
+}
+
+module-whatis   "GHC + cabal for haskell"
+
+set PREFIX /g/data1/xe2/opt/apps/haskell/
+
+prepend-path LD_RUN_PATH        $PREFIX/lib
+prepend-path LD_LIBRARY_PATH    $PREFIX/lib
+prepend-path LIBRARY_PATH       $PREFIX/lib
+prepend-path CPATH              $PREFIX/include
+prepend-path C_INCLUDE_PATH     $PREFIX/include
+prepend-path CPLUS_INCLUDE_PATH $PREFIX/include
+prepend-path PATH               $PREFIX/bin
+prepend-path MANPATH            $PREFIX/share/man

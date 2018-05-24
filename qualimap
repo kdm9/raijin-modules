@@ -1,0 +1,15 @@
+#%Module######################################################################
+source /opt/Modules/extensions/extensions.tcl
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Provides qualimap"
+}
+
+module-whatis   "qualimap"
+
+set PREFIX /g/data1/xe2/opt/apps/qualimap_v2.2.1/
+
+soft-prereq java/jdk1.8.0_60
+
+prepend-path PATH             $PREFIX/
